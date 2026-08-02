@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lenny Growth Assistant</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <button id="new-chat-btn" class="new-chat-btn">+ New Chat</button>
+      <div id="session-list" class="session-list"></div>
+    </aside>
+
+    <main class="chat-pane">
+      <header class="chat-header">
+        <h1>Lenny Growth Assistant</h1>
+        <label class="llm-toggle">
+          LLM:
+          <select id="llm-select">
+            <option value="groq">Cloud (GROQ)</option>
+            <option value="ollama">Local (Ollama)</option>
+          </select>
+        </label>
+      </header>
+
+      <div id="messages" class="messages">
+        <div class="empty-state">
+          Start a new chat, then ask a product/growth question, or say
+          "write this as a Ship30for30 essay" to trigger the content-generation skill.
+        </div>
+      </div>
+
+      <form id="chat-form" class="chat-input-row">
+        <textarea id="chat-input" placeholder="Ask about product growth, or request an essay/artifact..." rows="2"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <aside id="artifact-panel" class="artifact-panel hidden">
+      <div class="artifact-header">
+        <span id="artifact-title">Artifact</span>
+        <div class="artifact-actions">
+          <button id="copy-artifact" class="copy-artifact-btn">Copy</button>
+          <button id="close-artifact">✕</button>
+        </div>
+      </div>
+      <div id="artifact-body" class="artifact-body"></div>
+    </aside>
+  </div>
+
+  <script src="app.js?v=2"></script>
+</body>
+</html>

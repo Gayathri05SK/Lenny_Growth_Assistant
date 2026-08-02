@@ -1,0 +1,28 @@
+version: "3.8"
+# Optional: only needed if you'd rather run Postgres/Qdrant locally instead of
+# Supabase / Qdrant Cloud. If you're using Supabase + Qdrant Cloud (recommended,
+# see README), you don't need this file at all.
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: lenny
+      POSTGRES_PASSWORD: lenny
+      POSTGRES_DB: lenny_growth_assistant
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: unless-stopped
+    ports:
+      - "6333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+
+volumes:
+  pgdata:
+  qdrant_data:

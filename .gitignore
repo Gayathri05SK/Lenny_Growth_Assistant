@@ -1,0 +1,8 @@
+backend/.env
+backend/venv/
+backend/local.db
+backend/qdrant_data/
+backend/data/
+__pycache__/
+*.pyc
+.DS_Store
