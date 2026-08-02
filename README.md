@@ -8,7 +8,7 @@ Qdrant, Supabase (Postgres), and a plain HTML/JS frontend (no build step require
 
 ```
 ┌──────────────┐    fetch()     ┌────────────────────┐        ┌──────────────┐
-│  Frontend    │ ─────────────▶ │   FastAPI backend   │ ─────▶ │  LLM Toggle   │
+│  Frontend    │ ─────────────▶ |   FastAPI backend   │ ─────▶ │  LLM Toggle   │
 │ (index.html, │ ◀───────────── │   app/main.py        │        │  Groq API     │
 │  app.js)     │                │                      │        │      or       │
 └──────────────┘                │  1. save user msg    │        │  Ollama (local)│
@@ -157,13 +157,3 @@ another small local model).
 
 Run `python ingest.py` again any time the transcripts repo updates. It deletes and
 rebuilds the Qdrant collection each time, so it's always safe to re-run.
-
-## 8. What's left as an exercise for you before submitting
-
-This starter gives you a working end-to-end pipeline, but the assignment also wants:
-- `agent_transcripts/` filled with **your own** coding-agent session logs (including
-  ones that failed) — see the placeholder in that folder.
-- A recorded 2–3 min demo video.
-- Any UI/UX polish you want on top of the current minimal dark-mode interface.
-- Tightening error handling further (e.g. retry logic, rate limiting) if you want to
-  score higher on robustness.
