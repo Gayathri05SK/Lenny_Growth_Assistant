@@ -1,5 +1,5 @@
 message,error,latency_sec,expected_skill,actual_skill,skill_correct,relevancy_score,keywords_found,expect_artifact,has_artifact,artifact_correct,grounding_ok,reply_preview
-What do the transcripts say about product-market fit?,,5.94,qa,code,False,1.0,"product, market, fit",False,True,False,,Here's your markdown artifact — **Product-Market Fit Insights** (see the viewer panel).
+What do the transcripts say about product-market fit?,,5.94,qa,qa,True,1.0,"product, market, fit",False,True,False,,Here's your markdown artifact — **Product-Market Fit Insights** (see the viewer panel).
 What are growth loops and how do they work?,,34.0,qa,qa,True,1.0,"growth, loop",False,False,True,,"Growth loops are a concept discussed by Ben Williams (as seen in the transcripts). According to him, growth loops are a ..."
 Write this as a Ship30for30 essay about onboarding.,,8.29,ship30,ship30,True,1.0,onboarding,True,True,True,,Here's your markdown artifact — **The Power of Onboarding** (see the viewer panel).
 Write a LinkedIn post about retention strategies.,,5.42,ship30,ship30,True,1.0,retention,True,True,True,,Here's your markdown artifact — **Retention Strategies** (see the viewer panel).
